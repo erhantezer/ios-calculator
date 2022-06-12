@@ -49,6 +49,7 @@ const setStrAsValue = (valueStr) => {
   }
 
   const [wholeNumStr, decimalStr] = valueStr.split('.');
+  
   if (decimalStr) {
     valueEl.textContent =
       parseFloat(wholeNumStr).toLocaleString() + '.' + decimalStr;
@@ -158,6 +159,7 @@ for (let i=0; i < numberElArray.length; i++) {
     handleNumberClick(i.toString());
   });
 }
+
 decimalEl.addEventListener('click', () => {
   const currentValueStr = getValueAsStr();
   if (!currentValueStr.includes('.')) {
